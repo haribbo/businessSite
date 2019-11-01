@@ -1,0 +1,14 @@
+// 글꼴 모음 : 'Saira', sans-serif;
+$ft_eng: 'Roboto', sans-serif;
+$ft_kr: 'Noto Without KR', sans-serif;
+$colors: (
+  primary:#ffc809,
+  heading: #111,
+  conts: #6c757d,
+  fff: #fff,
+  000: #000
+);
+
+@function colors($color_name) {
+  @return map-get($colors,$color_name);
+}

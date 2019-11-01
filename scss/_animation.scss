@@ -1,0 +1,93 @@
+// default ani
+@mixin animated($ani_name:fadeInUp) {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-name: $ani_name;
+}
+
+.slow {
+  animation-duration: 0.8s;
+}
+@mixin delay-0 {
+  &[data-scroll] {
+    animation-delay: 0.2s;
+    animation-duration:1s;
+  }
+}
+
+@mixin delay-1 {
+  &[data-scroll] {
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+  }
+}
+@mixin animated_script($ani_name:fadeInUp) {
+  &[data-scroll="in"] {
+    @include animated($ani_name);
+  }
+
+  &[data-scroll="out"] {
+    opacity: 0;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInleft {
+  from {
+    opacity: 0;
+    transform: translate3d(-40%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.section_heading {
+  @include animated_script;
+  @include delay-0;
+}
+
+.main_conts {
+  @include animated_script;
+  @include delay-1;
+}
+
+.conts_heading {
+  @include animated_script(fadeInRight);
+  @include delay-0;
+}
+.txt_box {
+  @include animated_script(fadeInRight);
+  &[data-scroll] {
+    animation-delay: 0.5s;
+    animation-duration:1s;
+  }
+}
+.contact_heading {
+  @include animated_script(fadeInleft);
+  @include delay-0;
+
+}

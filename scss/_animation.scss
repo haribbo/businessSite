@@ -10,11 +10,10 @@
 }
 @mixin delay-0 {
   &[data-scroll] {
-    animation-delay: 0.2s;
-    animation-duration:1s;
+    animation-delay: 0.3s;
+    animation-duration: 1s;
   }
 }
-
 @mixin delay-1 {
   &[data-scroll] {
     animation-delay: 1s;
@@ -33,7 +32,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 40%, 0);
   }
 
   to {
@@ -52,7 +51,6 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
 @keyframes fadeInleft {
   from {
     opacity: 0;
@@ -79,15 +77,56 @@
   @include animated_script(fadeInRight);
   @include delay-0;
 }
+
 .txt_box {
   @include animated_script(fadeInRight);
+
   &[data-scroll] {
     animation-delay: 0.5s;
-    animation-duration:1s;
+    animation-duration: 1s;
   }
 }
+
 .contact_heading {
   @include animated_script(fadeInleft);
   @include delay-0;
+}
 
+$animList: 1 0s, 2 0.1s, 3 0.2s, 4 0.3s;
+@each $item in $animList {
+  .icon_list .icon_list_item:nth-child(#{nth($item, 1)}) {
+    animation-delay: nth($item,2);
+    animation-duration: 0.8s;
+  }
+}
+
+$animList: 5 0.4s, 6 0.5s, 7 0.6s, 8 0.7s;
+@each $item in $animList {
+  .icon_list.business_icon .icon_list_item:nth-child(#{nth($item, 1)}) {
+    animation-delay: nth($item,2);
+    animation-duration: 0.8s;
+  }
+}
+
+.person_list .person {
+  @include animated_script;
+}
+$animList: 1 0.6s, 2 0.9s, 3 1.3s;
+@each $item in $animList {
+  .person_list .person:nth-child(#{nth($item, 1)}) {
+    animation-delay: nth($item,2);
+    animation-duration: 0.4s;
+  }
+}
+
+.card_list_item {
+  @include animated_script
+}
+
+$animList: 1 0.1s, 2 0.2s, 3 0.3s, 4 0.4s, 5 0.5s , 6 0.6s;
+@each $item in $animList {
+  #projects_page .card_list .card_list_item:nth-child(#{nth($item, 1)}) {
+    animation-delay: nth($item,2);
+    animation-duration: 0.2s;
+  }
 }

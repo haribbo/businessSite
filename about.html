@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900|Roboto:300,400,900|Saira&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav>
+      <h1><a href="">SARIA</a></h1>
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="business.html">사업소개</a></li>
+        <li><a href="projects.html">프로젝트</a></li>
+        <li><a href="contact.html">사업문의</a></li>
+      </ul>
+      <div class="sns_links">
+        <a href="#"><i class="xi-blogger xi-2x"></i></a>
+        <a href="#"><i class="xi-facebook xi-2x"></i></a>
+      </div>
+      <div>
+        <i class="xi-ellipsis-h xi-2x mobile_btn">
+        </i>
+      </div>
+    </nav>
+  </header>
+  <!-- header end -->
+  <section class="showcase">
+    <h2 class="showcase_heading">
+      about us
+    </h2>
+    <p class="showcase_desc">
+      저희를 소개합니다.
+    </p>
+  </section>
+  <main id="about_page">
+    <section class="about_intro">
+      <div class="left">
+        <div class="conts_heading">
+          <p>marketing</p>
+          <h2>고객을 향하는 공감 마케팅</h2>
+        </div>
+        <div class="txt_box conts_box">
+          <p>대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 국회의원은 그 지위를 남용하여 국가·공공단체 또<br>
+            그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할
+          </p>
+          <p>하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다.</p>
+        </div>
+      </div>
+      <div class="right">
+        <p>IMG</p>
+      </div>
+    </section>
+    <section class="about_us">
+      <div class="section_heading">
+        <h2>Meet our Team</h2>
+        <p>마케팅별 전문성을 가진 담당자가 1:1 상담 및 마케팅 설계를 하고 있습니다</p>
+      </div>
+      <div class="person_list">
+        <div class="person">
+          <div class="person_card">
+            <img src="images/person_2.jpg" alt="">
+          </div>
+          <h3>CEO</h3>
+          <p class="talk">
+            "다년간 쌓은 노하우를 바탕으로한<br>
+            효과적인 마케팅을 만나보세요"
+          </p>
+        </div>
+        <div class="person">
+          <div class="person_card">
+            <img src="images/person_1.jpg" alt="">
+          </div>
+          <h3>CEO</h3>
+          <p class="talk">
+            "다년간 쌓은 노하우를 바탕으로한<br>
+            효과적인 마케팅을 만나보세요"
+          </p>
+        </div>
+        <div class="person">
+          <div class="person_card">
+            <img src="images/person_2.jpg" alt="">
+          </div>
+          <h3>CEO</h3>
+          <p class="talk">
+            "다년간 쌓은 노하우를 바탕으로한<br>
+            효과적인 마케팅을 만나보세요"
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about_parthers">
+      <div class="section_heading">
+        <h2>파트너스</h2>
+        <p>함께한 파트너스</p>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href=""><img src="images/logos/logo1.png" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><img src="images/logos/logo2.png" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><img src="images/logos/logo3.png" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><img src="images/logos/logo6.png" alt=""></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><img src="images/logos/logo7.png" alt=""></a>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    ScrollOut({
+      targets: ".section_heading,.main_conts,.icon_list_item,.conts_heading,.txt_box,.contact_heading,.person"
+    });
+  </script>
+
+</body>
+
+</html>

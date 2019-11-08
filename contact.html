@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900|Roboto:300,400,900|Saira&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav>
+      <h1><a href="">SARIA</a></h1>
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="business.html">사업소개</a></li>
+        <li><a href="projects.html">프로젝트</a></li>
+        <li><a href="contact.html">사업문의</a></li>
+      </ul>
+      <div class="sns_links">
+        <a href="#"><i class="xi-blogger xi-2x"></i></a>
+        <a href="#"><i class="xi-facebook xi-2x"></i></a>
+      </div>
+      <div>
+        <i class="xi-ellipsis-h xi-2x mobile_btn">
+        </i>
+      </div>
+    </nav>
+  </header>
+  <!-- header end -->
+  <section class="showcase">
+    <h2 class="showcase_heading">
+      Contact us
+    </h2>
+    <p class="showcase_desc">
+      무엇이든 물어봐주세요.
+    </p>
+  </section>
+  <main id="contact_page">
+    <form action="">
+      <div class="section_heading">
+        <span>Contact Us</span>
+        <h2>비즈니스 문의</h2>
+      </div>
+      <section class="contact_form main_conts">
+        <div class="input_row row_name">
+          <label for="">이름</label>
+          <input type="text">
+        </div>
+        <div class="input_row row_call">
+          <label for="">연락처</label>
+          <input type="text">
+        </div>
+        <div class="input_row">
+          <label for="">이메일</label>
+          <input type="email">
+        </div>
+        <div class="input_row">
+          <label for="">문의내용</label>
+          <textarea name="name" rows="8" cols="80"></textarea>
+        </div>
+        <div class="input_row row_btn">
+          <button class="primary_btn" type="submit">문의하기</button>
+        </div>
+      </section>
+    </form>
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer_bottom">
+      <div class="footer_bottom_inner">
+        <div class="conts_box">
+          <h3>SARIA</h3>
+          <p>재의의 요구가 있을 때에는 국회는 재의에 붙이고 재적의원과반수의 출석과 출석의원</p>
+        </div>
+        <div class="conts_box">
+          <h3>Contact Info</h3>
+          <dt>Address:</dt>
+          <dd>34 Street Name, City Name Here, United States </dd>
+          <dt>Telephone:</dt>
+          <dd>+1 242 4942 290</dd>
+          <dt>Email:</dt>
+          <dd>info@yourdomain.com</dd>
+        </div>
+        <div class="conts_box">
+          <h3>Site Map</h3>
+          <a href="index.html">홈</a>
+          <a href="">회사소개</a>
+          <a href="">프로젝트</a>
+          <a href="">사업문의</a>
+        </div>
+        <div class="copy">
+          <p>Copyright (c) 2019 Copyright Holder All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    ScrollOut({
+      targets: ".section_heading,.main_conts,.icon_list_item,.conts_heading,.txt_box,.contact_heading"
+    });
+  </script>
+</body>
+
+</html>
